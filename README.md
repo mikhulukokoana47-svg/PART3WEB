@@ -1,10 +1,9 @@
 # Medigrow ZA - Website Project (WEDE5020)
 
 ## Student Information
-- **Subject Name & Code:** Web Development (Introduction) - WEDE5020
-- **Student Full Name:** [Insert Your Full Name Here]
-- **Student Number:** [Insert Your Student Number Here]
-- **Group:** [Insert Group Name/Number if applicable]
+- **Subject Name & Code:** Web Development 
+- **Student Full Name:** Mikhulu Kokoana
+- **Student Number:** ST10527672
 
 ## Project Overview
 This repository contains the complete source code for the Medigrow ZA website. Medigrow ZA is a pioneering South African company established in 2017 that has evolved from a cannabis industry consultancy into a major industrial force in the medicinal cannabis sector. Under the leadership of CEO Edgar Adams, the company has embarked on an ambitious R1 billion investment to establish a state-of-the-art cannabis processing facility at the Coega Special Economic Zone in Gqeberha, Eastern Cape. 
