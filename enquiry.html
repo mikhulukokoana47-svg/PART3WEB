@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Submit an enquiry to Medigrow ZA. Ask about becoming a hemp farmer, partnership opportunities, or product availability.">
+    <meta name="keywords" content="Medigrow ZA enquiry, become a hemp farmer, cannabis investment South Africa, product availability">
+    <title>Enquiry - Medigrow ZA</title>
+    
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Medigrow ZA</h1>
+        <p>Submit Your Enquiry</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="full-width">
+            <h2>Enquiry Form</h2>
+            <img src="images/cannabis-plants-growth.jpg" alt="Cannabis plants growing in a controlled environment at Medigrow ZA" width="600">
+            <p>Please complete the form below to submit your enquiry.</p>
+            
+            <!-- Success Message Div (Hidden by default) -->
+            <div id="formResponse" class="success-msg"></div>
+
+            <form id="enquiryForm" action="#" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                    <span class="error-msg" id="nameError"></span>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                    <span class="error-msg" id="emailError"></span>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                    <label for="company">Company/Organisation Name (if applicable):</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company name">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Enquiry Type</legend>
+                    <p>Please select the type of enquiry:</p>
+                    <input type="radio" id="farmer" name="enquirytype" value="Farmer Enquiry">
+                    <label for="farmer" style="display: inline;">Become a Hemp Farmer</label><br>
+                    
+                    <input type="radio" id="partnership" name="enquirytype" value="Partnership Enquiry">
+                    <label for="partnership" style="display: inline;">Partnership / Investment Enquiry</label><br>
+                    
+                    <input type="radio" id="product" name="enquirytype" value="Product Enquiry">
+                    <label for="product" style="display: inline;">Product Enquiry</label><br>
+                    
+                    <input type="radio" id="general" name="enquirytype" value="General Enquiry">
+                    <label for="general" style="display: inline;">General Enquiry</label>
+                    <span class="error-msg" id="typeError"></span>
+                </fieldset>
+                
+                <fieldset style="flex: 1 1 100%;">
+                    <legend>Your Message</legend>
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject">
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="8" placeholder="Please provide detailed information about your enquiry"></textarea>
+                    <span class="error-msg" id="messageError"></span>
+                </fieldset>
+                
+                <div style="flex: 1 1 100%; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <input type="submit" value="Submit Enquiry">
+                    <input type="reset" value="Clear Form">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Medigrow ZA. All rights reserved.</p>
+        <p><strong>Official Website:</strong> <a href="https://www.medigrow.co.za" target="_blank">www.medigrow.co.za</a></p>
+    </footer>
+
+    <!-- Link to JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

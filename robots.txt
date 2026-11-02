@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mikhulukoana47-svg.github.io/PART3WEB/sitemap.xml

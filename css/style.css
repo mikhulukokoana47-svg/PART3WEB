@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Medigrow ZA - External Stylesheet
+   ========================================================================== */
+
+/* 1. CSS Reset / Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #1b5e20;       /* Deep Green */
+    --primary-hover: #144018;       /* Darker Green */
+    --secondary-color: #fbc02d;     /* Gold */
+    --text-color: #333333;          /* Dark Grey */
+    --bg-light: #f9f9f9;
+    --bg-white: #ffffff;
+    --bg-dark: #1a1a1a;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', Arial, sans-serif;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-light);
+}
+
+/* 2. Typography Styles */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: 1px; }
+h2 { font-size: 2rem; font-weight: 600; border-bottom: 2px solid var(--secondary-color); padding-bottom: 0.5rem; display: inline-block; }
+h3 { font-size: 1.5rem; font-weight: 600; }
+h4 { font-size: 1.2rem; font-weight: 600; color: var(--primary-color); }
+p { margin-bottom: var(--spacing-sm); }
+a { color: var(--primary-color); text-decoration: none; transition: color var(--transition-speed) ease; }
+a:hover { color: var(--secondary-color); text-decoration: underline; }
+
+/* 3. Layout Structure */
+header, nav, main, footer { width: 100%; max-width: 1200px; margin: 0 auto; }
+
+header { background-color: var(--primary-color); color: var(--bg-white); padding: var(--spacing-lg) var(--spacing-md); text-align: center; }
+header h1, header p { color: var(--bg-white); }
+
+nav { background-color: var(--secondary-color); padding: var(--spacing-sm); }
+nav ul { display: flex; justify-content: center; align-items: center; list-style: none; gap: var(--spacing-md); flex-wrap: wrap; }
+nav a { color: var(--bg-dark); font-weight: bold; padding: 0.5rem 1rem; border-radius: var(--border-radius); transition: background-color var(--transition-speed), color var(--transition-speed); }
+nav a:hover, nav a:focus, nav a:active { background-color: var(--bg-dark); color: var(--secondary-color); text-decoration: none; }
+
+main { display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); padding: var(--spacing-lg) var(--spacing-md); }
+
+section { background-color: var(--bg-white); padding: var(--spacing-md); border-radius: var(--border-radius); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); border: 1px solid #e0e0e0; }
+section img { display: block; max-width: 100%; height: auto; margin: var(--spacing-sm) auto; border-radius: var(--border-radius); }
+
+footer { background-color: var(--bg-dark); color: var(--bg-white); padding: var(--spacing-md); text-align: center; }
+footer p { margin-bottom: 0.5rem; }
+footer ul { display: flex; justify-content: center; gap: var(--spacing-md); list-style: none; margin-top: var(--spacing-sm); }
+footer a { color: var(--secondary-color); font-weight: bold; }
+footer a:hover { color: var(--bg-white); }
+
+/* 4. Form Styles */
+form { display: flex; flex-direction: column; gap: var(--spacing-md); max-width: 800px; margin: 0 auto; }
+fieldset { border: 1px solid #ccc; border-radius: var(--border-radius); padding: var(--spacing-md); background-color: #fafafa; }
+legend { font-family: var(--font-heading); font-weight: bold; color: var(--primary-color); padding: 0 0.5rem; font-size: 1.1rem; }
+label { display: block; margin-bottom: 0.3rem; font-weight: 600; color: var(--text-color); }
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-family: var(--font-body); font-size: 1rem; margin-bottom: var(--spacing-sm); transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+    outline: none; border-color: var(--primary-color); box-shadow: 0 0 5px rgba(27, 94, 32, 0.3);
+}
+
+input[type="radio"] { margin-right: 0.5rem; cursor: pointer; }
+
+input[type="submit"], input[type="reset"] {
+    font-family: var(--font-heading); font-weight: bold; font-size: 1rem; padding: 0.75rem 2rem; border: none; border-radius: var(--border-radius); cursor: pointer; transition: background-color var(--transition-speed), transform 0.1s; width: 100%; max-width: 200px; margin-top: 0.5rem;
+}
+
+input[type="submit"] { background-color: var(--primary-color); color: var(--bg-white); }
+input[type="submit"]:hover, input[type="submit"]:focus { background-color: var(--primary-hover); }
+input[type="submit"]:active { transform: scale(0.98); }
+input[type="reset"] { background-color: #666; color: var(--bg-white); }
+input[type="reset"]:hover { background-color: #444; }
+
+/* 5. Responsive Design */
+@media (min-width: 768px) {
+    main { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+    section.full-width { grid-column: 1 / -1; }
+    form { flex-direction: row; flex-wrap: wrap; }
+    fieldset { flex: 1 1 45%; }
+    input[type="submit"], input[type="reset"] { width: auto; }
+}
+
+@media (max-width: 767px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    nav ul { flex-direction: column; gap: 0.5rem; }
+    nav a { display: block; width: 100%; text-align: center; }
+    main { padding: var(--spacing-sm); gap: var(--spacing-md); }
+    section { padding: var(--spacing-sm); }
+    footer ul { flex-direction: column; gap: 0.5rem; }
+}
+
+/* 6. Part 3 Specific Styles */
+.error-msg { color: #d32f2f; font-size: 0.85rem; display: block; margin-bottom: 0.5rem; font-weight: bold; }
+.success-msg { background-color: #e8f5e9; color: #2e7d32; padding: 1rem; border-left: 5px solid #2e7d32; margin-top: 1rem; border-radius: 4px; display: none; }
+
+.accordion-btn { background-color: var(--bg-white); color: var(--primary-color); cursor: pointer; padding: 1rem; width: 100%; border: 1px solid #ccc; text-align: left; outline: none; font-size: 1.1rem; font-weight: bold; margin-top: 0.5rem; transition: background-color 0.3s; }
+.accordion-btn.active, .accordion-btn:hover { background-color: var(--bg-light); border-left: 4px solid var(--primary-color); }
+.accordion-panel { padding: 1rem; display: none; background-color: var(--bg-white); border: 1px solid #ccc; border-top: none; }
+
+.search-container { margin: 1.5rem 0; display: flex; gap: 1rem; align-items: center; }
+.search-container input { padding: 0.75rem; width: 100%; max-width: 400px; border: 1px solid #ccc; border-radius: 4px; }
+
+.map-container { position: relative; overflow: hidden; padding-top: 56.25%; width: 100%; }
+.map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
